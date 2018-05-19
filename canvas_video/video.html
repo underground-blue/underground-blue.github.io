@@ -21,7 +21,7 @@
   
   <script src="https://vjs.zencdn.net/7.0.2/video.js"></script>
   <script>
-    (function(){
+    document.addEventListener('DOMContentLoaded', function(){
       console.log("jsCheck");
       var video = document.getElementById("v_html5_api");
 
@@ -30,6 +30,6 @@
         var canvas = document.getElementById("c");
         canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
       }, true);
-    }());
+    },false);
   </script>
 </body>
