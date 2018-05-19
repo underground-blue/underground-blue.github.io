@@ -25,7 +25,7 @@
       console.log("jsCheck");
       var video = document.getElementById("v_html5_api");
 
-      video.addEventListener("playing", function(){
+      video.addEventListener("canplay", function(){
         console.log("playingCheck");
         var canvas = document.getElementById("c");
         canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
