@@ -22,13 +22,14 @@
   <script src="https://vjs.zencdn.net/7.0.2/video.js"></script>
   <script>
     function(){
+      console.log("jsCheck");
+      var video = document.getElementById("v_html5_api");
 
-    var video = document.getElementById("v_html5_api");
-
-    video.addEventListener("playing", function(){
-            var canvas = document.getElementById("c");
-            canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
-        }, true);
+      video.addEventListener("playing", function(){
+        console.log("playingCheck");
+        var canvas = document.getElementById("c");
+        canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
+      }, true);
     }
   </script>
 </body>
