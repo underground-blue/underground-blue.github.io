@@ -24,11 +24,15 @@
     window.addEventListener('load', function(){
       console.log("jsCheck");
       var video = document.querySelector('video');
+      var canvas = document.getElementById("c");
 
-      video.addEventListener("timeupdate", function(){
+      video.addEventListener("playing", function(){
         console.log("playingCheck");
-        var canvas = document.getElementById("c");
-        canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
+        
+        (function loop(){
+          canvas.getContext("2d").drawImage(video, 0, 0, 480, 270);
+          requestAnimationFrame( loop );
+        })();
       }, true);
     },false);
   </script>
