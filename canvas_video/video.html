@@ -25,7 +25,7 @@
       console.log("jsCheck");
       var video = document.querySelector('video');
 
-      video.addEventListener("playing", function(){
+      video.addEventListener("timeupdate", function(){
         console.log("playingCheck");
         var canvas = document.getElementById("c");
         canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
