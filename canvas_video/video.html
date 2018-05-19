@@ -25,7 +25,7 @@
 
     var video = document.getElementById("v_html5_api");
 
-    video.addEventListener("timeupdate", function(){
+    video.addEventListener("playing", function(){
             var canvas = document.getElementById("c");
             canvas.getContext("2d").drawImage(video, 0, 0, 480, 270); 
         }, true);
