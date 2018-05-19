@@ -15,20 +15,16 @@
     <source src="https://videos-origin.mozilla.org/uploads/mozillaorg/meetFFXmobile2-640x360.mp4" type='video/mp4'>
   </video>
 
-  <button onClick="outputVideo1()">スキャン</button>
   <canvas id="c" width="480px" height="270px"></canvas>
   
   
   
   <script>
     document.addEventListener('DOMContentLoaded', function(){
-      console.log("jsCheck");
       var video = document.querySelector('video');
       var canvas = document.getElementById("c");
 
       video.addEventListener("playing", function(){
-        console.log("playingCheck");
-        
         (function loop(){
           canvas.getContext("2d").drawImage(video, 0, 0, 480, 270);
           requestAnimationFrame( loop );
